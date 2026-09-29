@@ -1,0 +1,444 @@
+```html
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Martin Pastore | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #111111;
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        /* NAVIGAZIONE */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(17, 17, 17, 0.9);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            opacity: 0.6;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 120px 8% 80px;
+        }
+
+        .hero h1 {
+            font-size: clamp(55px, 10vw, 130px);
+            line-height: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 650px;
+            color: #cccccc;
+        }
+
+        /* SEZIONI */
+
+        section {
+            padding: 100px 8%;
+        }
+
+        .section-title {
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 50px;
+            color: #999999;
+        }
+
+        /* CHI SONO */
+
+        .about {
+            max-width: 900px;
+        }
+
+        .about p {
+            font-size: 24px;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        .highlight {
+            font-size: 28px !important;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+
+        /* FORMAZIONE */
+
+        .education {
+            max-width: 1000px;
+        }
+
+        .education-item {
+            border-top: 1px solid #444;
+            padding: 30px 0;
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 30px;
+        }
+
+        .education-date {
+            color: #999999;
+        }
+
+        .education h3 {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .education p {
+            color: #cccccc;
+            max-width: 700px;
+        }
+
+        /* PORTFOLIO */
+
+        .portfolio-intro {
+            font-size: 24px;
+            margin-bottom: 50px;
+            color: #cccccc;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .project {
+            min-height: 300px;
+            border: 1px solid #444;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            background: #222222;
+            transform: translateY(-5px);
+        }
+
+        .project h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #aaaaaa;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 80px 8%;
+            border-top: 1px solid #333;
+            color: #888;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 18px 5%;
+            }
+
+            nav ul {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 120px 6% 70px;
+            }
+
+            section {
+                padding: 70px 6%;
+            }
+
+            .about p {
+                font-size: 20px;
+            }
+
+            .education-item {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGAZIONE -->
+
+    <nav>
+        <div class="logo">Martin Pastore</div>
+
+        <ul>
+            <li><a href="#chi-sono">Chi sono</a></li>
+            <li><a href="#formazione">Formazione</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO -->
+
+    <header class="hero">
+        <h1>Martin<br>Pastore</h1>
+
+        <p>
+            Cinema, immagini e storie.<br>
+            Un film alla volta. Un'idea alla volta.
+        </p>
+    </header>
+
+
+    <!-- CHI SONO -->
+
+    <section id="chi-sono">
+
+        <div class="section-title">01 — Chi sono</div>
+
+        <div class="about">
+
+            <p>
+                Salve, sono Martin Pastore e faccio cinema per poter raccontare
+                le cose che osservo da vicino.
+            </p>
+
+            <p>
+                Una luce, un gesto, un'esperienza, una conversazione:
+                è da queste piccole cose che spesso nascono gran parte delle
+                mie idee.
+            </p>
+
+            <p>
+                Mi interessa prendere questi dettagli e trasformarli in immagini,
+                costruendo storie che possano far ridere, emozionare, riflettere
+                o semplicemente lasciare qualcosa.
+            </p>
+
+            <p>
+                Attualmente studio Cinema all’Accademia di Belle Arti di Napoli
+                e, nel mio percorso, sto esplorando diversi aspetti della
+                produzione audiovisiva: dalla scrittura alla regia, dalla ripresa
+                al montaggio, fino al suono.
+            </p>
+
+            <p>
+                Non ho ancora un linguaggio completamente definito —
+                e forse è proprio questo il bello.
+                Sto ancora sperimentando, provando strade diverse e cercando
+                di capire quale sia il modo più autentico per raccontare quello
+                che ho in testa.
+            </p>
+
+            <p>
+                Questo portfolio è una raccolta di tutto questo:
+                idee diventate progetti, esperimenti, immagini, storie e pezzi
+                del percorso che sto costruendo.
+            </p>
+
+            <p class="highlight">
+                Un film alla volta.<br>
+                Un'idea alla volta.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FORMAZIONE -->
+
+    <section id="formazione">
+
+        <div class="section-title">02 — Formazione</div>
+
+        <div class="education">
+
+            <div class="education-item">
+
+                <div class="education-date">
+                    Settembre 2019 — Giugno 2024
+                </div>
+
+                <div>
+                    <h3>Liceo Artistico Umberto Boccioni</h3>
+
+                    <p>
+                        Indirizzo Multimediale.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="education-item">
+
+                <div class="education-date">
+                    2024 — in corso
+                </div>
+
+                <div>
+                    <h3>Accademia di Belle Arti di Napoli</h3>
+
+                    <p>
+                        Cinema.
+                    </p>
+
+                    <p>
+                        Percorso di studi in ambito cinematografico e audiovisivo,
+                        con attività pratiche e teoriche legate alla realizzazione
+                        di cortometraggi, documentari e altri progetti audiovisivi.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="education-item">
+
+                <div class="education-date">
+                    2019 — 2025
+                </div>
+
+                <div>
+                    <h3>Associazione Popolart</h3>
+
+                    <p>
+                        Percorso di batteria.
+                    </p>
+
+                    <p>
+                        Sette anni di studio della batteria, accompagnati da
+                        attività pratiche e formative in ambito musicale.
+                        Durante il percorso ho conseguito anche due idoneità
+                        accademiche.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PORTFOLIO -->
+
+    <section id="portfolio">
+
+        <div class="section-title">03 — Portfolio</div>
+
+        <p class="portfolio-intro">
+            I miei progetti cinematografici e audiovisivi.
+        </p>
+
+        <div class="projects">
+
+            <div class="project">
+                <h3>Progetto 01</h3>
+                <p>
+                    Inserisci qui il titolo e una breve descrizione del progetto.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Progetto 02</h3>
+                <p>
+                    Inserisci qui il titolo e una breve descrizione del progetto.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Progetto 03</h3>
+                <p>
+                    Inserisci qui il titolo e una breve descrizione del progetto.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Progetto 04</h3>
+                <p>
+                    Inserisci qui il titolo e una breve descrizione del progetto.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        © 2026 Martin Pastore — Portfolio
+    </footer>
+
+</body>
+</html>
+```
